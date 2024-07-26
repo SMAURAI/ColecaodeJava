@@ -21,5 +21,6 @@ public class ListaTarefa {
                 tarefasParaRemover.add(t);
             }
         }
+        tarefaList.RemoveAll(tarefasParaRemover);
     }
 }
