@@ -23,4 +23,12 @@ public class ListaTarefa {
         }
         tarefaList.RemoveAll(tarefasParaRemover);
     }
+
+    public int obterTotaldeTarefas(){
+        return tarefaList.size();
+    }
+
+    public void obterDescricoesTarefas(){
+        System.out.println(tarefaList)
+    }
 }
