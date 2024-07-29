@@ -31,4 +31,36 @@ public class ListaTarefa {
     public void obterDescricoesTarefas(){
         System.out.println(tarefaList)
     }
+
+    public List<tarefaList> pesquisaDeTarefa (String descricao){
+        List<Tarefa> resultadoPesquisa = new ArrayList<>();
+        if(!tarefaList.isEmpty()){
+            for(Tarefa t: tarefaList){
+                if(l.getDescricao.equalsIgnoreCase(descricao)){
+                    resultadoPesquisa.add(t);
+                }
+            }
+        }
+        return resultadoPesquisa;
+    }
+
+    public List<Tarefa> ordenado(){
+        List<Tarefa> stringExtensao = new ArrayList<>(tarefaList);
+        Collections.sort(stringExtensao);
+        return stringExtensao;
+    }
+
+    public String toString(){
+        return "Tarefas{" + "Descrição= " + tarefaList + "}";
+    }
+
+    public int compareTo (Tarefa t){
+        return Integer.compare(descricao, t.getDescricao);
+    }
+
+    public List<Tarefa> ordenadoComparator(){
+        List<Tarefa> stringExtensao = new ArrayList<>(tarefaList);
+        Collections.sort(stringExtensao, new Comparatorseila());
+        return stringExtensao       
+    }
 }
